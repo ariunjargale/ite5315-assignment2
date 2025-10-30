@@ -1,0 +1,15 @@
+<h2>{{property.NAME}}</h2>
+<img src="{{property.thumbnail}}" width="200">
+
+<p><b>Hosted by:</b> {{property.[host name]}} ({{property.host_identity_verified}})</p>
+<p><b>Location:</b> {{property.neighbourhood}}, {{property.[neighbourhood group]}}, {{property.country}}</p>
+<p><b>Room type:</b> {{property.[room type]}}</p>
+<p><b>Price:</b> {{property.price}}</p>
+<p><b>Reviews:</b> {{property.[number of reviews]}}</p>
+<p><b>Rate:</b> {{property.[review rate number]}}/5</p>
+<p><b>House Rules:</b> {{property.house_rules}}</p>
+
+<h3>Images</h3>
+{{#each property.images}}
+  <img src="{{this}}" width="200" style="margin:5px;">
+{{/each}}

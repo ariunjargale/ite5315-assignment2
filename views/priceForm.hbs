@@ -1,0 +1,19 @@
+<h2>{{title}}</h2>
+
+{{#if errors}}
+  <ul style="color:red;">
+    {{#each errors}}
+      <li>{{msg}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
+
+<form method="POST" action="/viewData/price">
+  <label>Min Price:</label>
+  <input type="number" name="min" step="0.01" required />
+  <br /><br />
+  <label>Max Price:</label>
+  <input type="number" name="max" step="0.01" required />
+  <br /><br />
+  <input type="submit" value="Search" />
+</form>

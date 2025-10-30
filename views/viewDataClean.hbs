@@ -1,0 +1,30 @@
+<h2>{{title}}</h2>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Host</th>
+      <th>Country</th>
+      <th>Room Type</th>
+      <th>Price</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each listings}}
+      {{#if NAME}}
+        <tr>
+          <td>{{inc @index}}</td>
+          <td>{{checkName NAME}}</td>
+          <td>{{[host name]}}</td>
+          <td>{{country}}</td>
+          <td>{{[room type]}}</td>
+          <td>{{price}}</td>
+          <td>{{[review rate number]}}</td>
+        </tr>
+      {{/if}}
+    {{/each}}
+  </tbody>
+</table>

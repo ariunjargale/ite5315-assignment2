@@ -1,0 +1,19 @@
+<h2>Search by Property ID</h2>
+
+{{#if errors}}
+  <ul style="color:red;">
+    {{#each errors}}
+      <li>{{msg}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
+
+<form method="POST" action="/search/id">
+  <input
+    type="text"
+    name="Property_ID"
+    placeholder="Enter Property ID"
+    required
+  />
+  <input type="submit" value="Search" />
+</form>
