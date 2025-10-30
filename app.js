@@ -64,7 +64,9 @@ function loadJson() {
 function loadJsonZip() {
   if (!jsonData) {
     // Using zlib to decompress gzipped JSON file
-    const compressed = fs.readFileSync("airbnb_with_photos.json.gz");
+    const compressed = fs.readFileSync(
+      path.join(process.cwd(), "airbnb_with_photos.json.gz")
+    );
     const decompressed = zlib.gunzipSync(compressed);
     const data = decompressed.toString("utf8");
     jsonData = JSON.parse(data);
