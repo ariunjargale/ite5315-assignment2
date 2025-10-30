@@ -29,6 +29,9 @@ app.engine(
   ".hbs",
   exphbs.engine({
     extname: ".hbs",
+    defaultLayout: "main", // Use views/layouts/main.hbs as the default layout
+    // Specify the partials directory
+    partialsDir: path.join(__dirname, "views", "partials"),
     helpers: {
       checkName: (name) => (name ? name : "N/A"),
       inc: (value) => parseInt(value) + 1,
@@ -37,6 +40,7 @@ app.engine(
   })
 );
 app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "views"));
 
 // Added to use form body
 app.use(express.urlencoded({ extended: true }));
